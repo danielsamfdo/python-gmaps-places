@@ -1,10 +1,10 @@
 import requests
 import time
-api_key="AIzaSyAKyk1ebRoc8pf3IYmqcbvBSu-2OHHskxY"
+api_key=""
 city="37.386051%2C-122.083855" # Mountain View
 city="37.352390%2C-121.953079" # Santa Clara
 radius="15000" # 15 km
-url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={location}&radius={radius}&type=church&key=AIzaSyAKyk1ebRoc8pf3IYmqcbvBSu-2OHHskxY".format(radius=radius, location=city)
+url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={location}&radius={radius}&type=church&key={api_key}".format(radius=radius, api_key=api_key, location=city)
 payload={}
 headers = {}
 response = requests.request("GET", url, headers=headers, data=payload)
